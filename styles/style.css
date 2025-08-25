@@ -10,11 +10,12 @@
     --custom-dark-red: #8b0000; /* darkred */
     --custom-lakers-yellow: #FDB827; /* Lakers Yellow */
     --custom-lakers-purple: #552583; /* Lakers Purple */
+    --custom-france-blue: #0055A4; /* France Blue */
 }
 
 /* --- Estilos Globais do Body --- */
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../VonDemon.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../resources/VonDemon.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,23 +68,23 @@ p.lead {
 }
 
 .page-home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../shaq.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../resources/shaq.jpg');
     /* Lembre-se de colocar o caminho correto para sua nova imagem */
 }
 
 /* Esta regra seleciona o header (.bg-custom-dark) que está DENTRO de .page-home */
 .page-home .bg-custom-dark {
-    background-color: #FDB827 !important; /* Exemplo: um azul escuro */
+    background-color: var(--custom-lakers-yellow) !important; /* Exemplo: um azul escuro */
     /* Usamos !important para garantir que esta regra sobrescreva a original, se necessário */
 }
 
 .page-contact {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../shaq.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../resources/pogba_lips.jpg');
     /* Lembre-se de colocar o caminho correto para sua nova imagem */
 }
 
 .page-contact .bg-custom-dark {
-    background-color: #FDB827 !important; /* Exemplo: um cinza escuro */
+    background-color: var(--custom-france-blue) !important; /* Exemplo: um cinza escuro */
 }
 
 /* Estiliza os campos de input e textarea para combinar com o tema escuro */
