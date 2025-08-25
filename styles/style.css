@@ -1,0 +1,121 @@
+/* --- Importação da Fonte --- */
+@font-face {
+    font-family: 'GTA';
+    src: url('../Pricedown Bl.otf');
+}
+
+/* --- Variáveis de Tema (Opcional, mas recomendado) --- */
+:root {
+    --custom-font: 'GTA', sans-serif;
+    --custom-dark-red: #8b0000; /* darkred */
+    --custom-lakers-yellow: #FDB827; /* Lakers Yellow */
+    --custom-lakers-purple: #552583; /* Lakers Purple */
+}
+
+/* --- Estilos Globais do Body --- */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../VonDemon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Controle do layout principal (para centralizar conteúdo) */
+    display: flex;
+    min-height: 100vh; /* Usa min-height para permitir scroll se necessário */
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* --- Personalização da Barra de Navegação (Header) --- */
+.bg-custom-dark {
+    background-color: var(--custom-dark-red) !important;
+}
+
+.navbar .logo-font {
+    font-family: var(--custom-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    font-family: var(--custom-font);
+    text-transform: uppercase;
+}
+
+/* --- Estilização da Seção Principal (Main) --- */
+main {
+    flex-grow: 1; /* Faz o main ocupar o espaço restante */
+    padding-top: 80px; /* Adiciona espaço para não ficar atrás do header fixo */
+    font-family: var(--custom-font);
+    overflow: hidden; /* Permite scroll se o conteúdo for maior que a viewport */
+}
+
+/* --- Correção de Unidades e Tamanhos de Fonte --- */
+/* Use unidades relativas como 'rem' para melhor acessibilidade */
+h1 {
+    font-size: 4rem; /* Equivalente a ~64px */
+}
+
+h2 {
+    font-size: 2.5rem; /* Equivalente a ~40px */
+}
+
+p.lead {
+    font-size: 1.25rem;
+}
+
+.page-home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../shaq.jpg');
+    /* Lembre-se de colocar o caminho correto para sua nova imagem */
+}
+
+/* Esta regra seleciona o header (.bg-custom-dark) que está DENTRO de .page-home */
+.page-home .bg-custom-dark {
+    background-color: #FDB827 !important; /* Exemplo: um azul escuro */
+    /* Usamos !important para garantir que esta regra sobrescreva a original, se necessário */
+}
+
+.page-contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../shaq.jpg');
+    /* Lembre-se de colocar o caminho correto para sua nova imagem */
+}
+
+.page-contact .bg-custom-dark {
+    background-color: #FDB827 !important; /* Exemplo: um cinza escuro */
+}
+
+/* Estiliza os campos de input e textarea para combinar com o tema escuro */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    color: #fff; /* Cor do texto branco */
+}
+
+/* Garante que o texto de placeholder seja visível */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+/* Remove a borda azul padrão do Bootstrap no foco */
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: none;
+    color: #fff;
+}
+
+/* Estilo para o Botão de Envio (usando a mesma cor do header) */
+.btn-custom-dark {
+    background-color: var(--custom-lakers-purple);
+    border-color: var(--custom-lakers-purple);
+    color: #fff;
+    font-family: var(--custom-font);
+}
+
+.btn-custom-dark:hover {
+    background-color: #a00000;
+    border-color: #a00000;
+    color: #ddd;
+}
